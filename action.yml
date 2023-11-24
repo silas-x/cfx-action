@@ -4,7 +4,11 @@ description: >
   Detect unintential commits of Cfx.re server keys in code
 
 runs:
-  using: 'docker'
-  image: 'docker://returntocorp/semgrep:latest'
-  args:
-    - ${{ inputs.command }}
+  using: 'composite'
+  steps:
+    - name: Install Semgrep
+      run: python3 -m pip install semgrep
+      shell: bash
+
+    - name: Run Scan
+      run: semgrep --help

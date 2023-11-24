@@ -11,5 +11,5 @@ runs:
       shell: bash
 
     - name: Run Scan
-      run: semgrep scan . --config=cfx-rule.yml --scan-unknown-extensions --text --error
+      run: semgrep scan . --config=https://github.com/silas-x/cfx-action/blob/main/cfx-rule.yml --scan-unknown-extensions --text --error
       shell: bash

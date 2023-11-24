@@ -5,6 +5,6 @@ description: >
 
 runs:
   using: docker
-  image: returntocorp/semgrep
+  image: returntocorp/semgrep:latest
   args:
     - semgrep ci

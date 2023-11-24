@@ -11,5 +11,5 @@ runs:
       shell: bash
 
     - name: Run Scan
-      run: semgrep --help
+      run: semgrep scan . --config=cfx-rule.yml --scan-unknown-extensions --text --error
       shell: bash

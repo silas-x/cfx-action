@@ -1,7 +1,7 @@
 name: Cfx.re Server Key Detector
-author: silas-x
+author: Cfx.re
 description: >
-  Detect unintential commits of Cfx.re server keys in code
+  Detect committed Cfx.re server keys in source code
 
 runs:
   using: 'composite'
@@ -11,5 +11,5 @@ runs:
       shell: bash
       
     - name: Run Scan
-      run: semgrep scan --config=${{ github.action_path }}/cfx-rule.yml
+      run: semgrep scan --config=${{ github.action_path }}/cfx-rule.yml --error
       shell: bash

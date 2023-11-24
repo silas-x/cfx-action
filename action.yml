@@ -1,0 +1,11 @@
+name: Cfx.re Server Key Detector
+author: silas-x
+description: >
+  Detect unintential commits of Cfx.re server keys in code
+
+runs:
+  using: docker
+  image: returntocorp/semgrep
+  steps:
+    - uses: actions/checkout@v3
+    - run: semgrep ci

@@ -10,8 +10,6 @@ runs:
       run: python3 -m pip install semgrep
       shell: bash
       
-      uses: actions/checkout@v4
-      
     - name: Run Scan
-      run: semgrep scan --config=cfx-rule.yml
+      run: semgrep scan --config=${{ github.action_path }}/cfx-rule.yml
       shell: bash

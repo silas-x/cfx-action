@@ -1,0 +1,15 @@
+rules:
+    - id: detected-server-key-in-code
+      patterns: 
+        - pattern-regex: (cfxk_[0-9a-zA-Z]+)_([0-9a-zA-Z]+)
+      message: Found a Cfx.re server key in code!
+      languages:
+          - regex
+      severity: ERROR
+      metadata:
+          explanation: Detects if Cfx.re server keys are checked into source control
+          category: Server key
+          technology:
+              - secrets
+          confidence: HIGH
+          source: https://github.com/silas-x/cfx-action/cfx-rule.yml

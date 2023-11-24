@@ -6,6 +6,5 @@ description: >
 runs:
   using: docker
   image: returntocorp/semgrep
-  steps:
-    - uses: actions/checkout@v3
-    - run: semgrep ci
+  args:
+    - semgrep ci

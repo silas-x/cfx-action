@@ -9,7 +9,9 @@ runs:
     - name: Install Semgrep
       run: python3 -m pip install semgrep
       shell: bash
-
+      
+      uses: actions/checkout@v4
+      
     - name: Run Scan
-      run: semgrep scan --config=https://github.com/silas-x/cfx-action/blob/main/cfx-rule.yml --scan-unknown-extensions --text --error
+      run: semgrep scan --config=cfx-rule.yml
       shell: bash

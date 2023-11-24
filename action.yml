@@ -7,4 +7,4 @@ runs:
   using: 'docker'
   image: 'docker://returntocorp/semgrep:latest'
   args:
-    - 'semgrep --help'
+    - ${{ input.command }}

@@ -12,4 +12,4 @@ rules:
           technology:
               - secrets
           confidence: HIGH
-          source: https://github.com/silas-x/cfx-action/cfx-rule.yml
+          source: https://github.com/silas-x/cfx-action/blob/main/cfx-rule.yml

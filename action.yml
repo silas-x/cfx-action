@@ -6,4 +6,5 @@ description: >
 runs:
   using: 'docker'
   image: 'docker://returntocorp/semgrep:latest'
-  args: -ci
+  args: 
+    - '-ci'

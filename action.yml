@@ -7,9 +7,9 @@ runs:
   using: 'composite'
   steps:
     - name: Install Semgrep
-      run: python3 -m pip install semgrep
+      run: python3 -m pip --quiet install semgrep
       shell: bash
       
-    - name: Run Scan
-      run: semgrep scan --config=${{ github.action_path }}/cfx-rule.yml --error
+    - name: Key detector 🔎
+      run: semgrep scan --config=${{ github.action_path }}/cfx-rule.yml --error --scan-unknown-extensions
       shell: bash
